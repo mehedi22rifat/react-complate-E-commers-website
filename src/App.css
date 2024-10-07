@@ -1,0 +1,20 @@
+
+
+
+
+.secetion-container{
+    @apply max-w-screen-2xl container mx-auto lg:px-24 px-4;
+}
+
+header{
+    z-index: 10001 !important;
+}
+
+.nav-link {
+    @apply relative text-gray-800 font-medium transition-all ease-in-out duration-300;
+  }
+
+  .nav-link::after {
+    content: "";
+    @apply absolute left-0 bottom-0 h-[2px] bg-blue-500 w-0 transition-all duration-300 ease-in-out;
+  }
