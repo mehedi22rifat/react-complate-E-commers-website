@@ -5,6 +5,14 @@ body {
   font-family: "Outfit", sans-serif;
   }
 
+  .active{
+    border-bottom: 3px solid rgb(17, 229, 17);
+    animation: normal;
+    animation-duration: 1s;
+    transition-duration: 1s;
+    font: 600;
+  }
+
 
 @tailwind base;
 @tailwind components;
