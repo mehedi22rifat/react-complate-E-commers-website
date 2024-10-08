@@ -1,4 +1,9 @@
-import React from "react";
+
+import React, { useState } from "react";
+import productData from '../../../../public/products.json'
+import { Link } from "react-router-dom";
+import { useEffect } from 'react';
+import SelectedCetagory from "./SelectedCetagory";
 
 const Banner = () => {
   const title = (
@@ -24,7 +29,53 @@ const Banner = () => {
     },
   ];
 
+  //  
+  const [searchInput,setSearchInput] = useState("")
+  const [filtredProduct,setFiltredProduct] = useState(productData)
+  console.log(productData)
+
+  const handleSearch = (e) =>{
+     const serachThem = e.target.value;
+    //  console.log(serachThem)
+       setSearchInput(serachThem)
+
+      //  filter
+      const filterSearch = productData.filter((product) => product.name.toLocaleLowerCase().includes(serachThem).
+      toLocaleLowerCase());
+
+      setFiltredProduct(filterSearch)
+  }
+
+
+//  responsve limit
+const useResponsiveLimit = () => {
+  const [limit, setLimit] = useState(20); // Default to large screen (20)
+
+  useEffect(() => {
+    const updateLimit = () => {
+      const width = window.innerWidth;
+      if (width >= 1024) {
+        setLimit(20); // Large screen
+      } else if (width >= 768) {
+        setLimit(10); // Medium screen
+      } else {
+        setLimit(5); // Small screen
+      }
+    };
+
+    updateLimit(); // Set the initial limit
+    window.addEventListener('resize', updateLimit); // Update limit on resize
+
+    return () => window.removeEventListener('resize', updateLimit); // Cleanup on unmount
+  }, []);
+
+  return limit;
+};
+
+const limit = useResponsiveLimit();
+
   return (
+
     <div>
       <div className="relative h-screen w-full">
         <img
@@ -45,12 +96,15 @@ const Banner = () => {
           </h1>
           {/* search fuild */}
           <div className="flex relative rounded-md w-full px-4 max-w-xl">
+            <SelectedCetagory select={'all'} className="text-red-400"/>
             <input
               type="text"
               name="q"
               id="query"
+              value={searchInput}
+              onChange={handleSearch}
               placeholder="Search here"
-              className="w-full p-3 rounded-full border-2 border-r-white rounded-r-none border-gray-300 placeholder-gray-500 dark:placeholder-gray-300 dark:bg-gray-500dark:text-gray-300 dark:border-none "
+              className="w-full p-3  border-2 border-r-white rounded-r-none border-gray-300 placeholder-gray-500 dark:placeholder-gray-300 dark:bg-gray-500dark:text-gray-300 dark:border-none "
             />
             <button className="inline-flex items-center gap-2 bg-violet-700 text-white text-lg font-semibold py-3 px-6 rounded-r-full">
               <span>search</span>
@@ -76,6 +130,24 @@ const Banner = () => {
 
           {/*  */}
           <p className="text-2xl text-slate-300 mt-4 text-center">{doc}</p>
+       
+          {/* ul list search product title */}
+          <ul className="flex flex-wrap justify-center gap-4 mt-4">
+            {searchInput &&
+              filtredProduct
+                .slice(0, limit) // Use the limit based on screen size
+                .map((product, i) => (
+                  <li
+                    key={i}
+                    className="bg-white text-black p-1 md:p-4 rounded-lg shadow-lg animate-fadeIn hover:scale-105 transform transition-all duration-300 hover:shadow-2xl"
+                  >
+                    <Link to={`/shop/${product.id}`} className="block text-center">
+                      {product.name}
+                    </Link>
+                  </li>
+                ))}
+          </ul>
+       
         </div>
       </div>
     </div>
