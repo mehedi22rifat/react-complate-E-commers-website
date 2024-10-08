@@ -35,7 +35,7 @@ const Navbar = () => {
 
   return (
     
-   <div className={`navbar fixed font-bold md:text-white ${headerFixed ? 'bg-purple-700 animate-none duration-0':''} z-30 secetion-container shadow-xl  `}>
+   <div className={`navbar fixed container mx-auto font-bold md:text-white ${headerFixed ? 'bg-purple-700 animate-none duration-0':''} z-30 secetion-container shadow-xl  `}>
   <div className="navbar-start">
     <div className="dropdown">
       <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">

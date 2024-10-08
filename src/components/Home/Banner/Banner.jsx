@@ -12,7 +12,7 @@ const Banner = () => {
       Products
     </h1>
   );
-  const doc = "web have the largest collection product";
+  const doc = "we have the largest collection product";
 
   const bannerList = [
     {
@@ -95,7 +95,7 @@ const limit = useResponsiveLimit();
             {title}
           </h1>
           {/* search fuild */}
-          <div className="flex relative rounded-md w-full px-4 max-w-xl">
+          <div className="flex relative rounded-md w-full px-4 max-w-3xl">
             <SelectedCetagory select={'all'} className="text-red-400"/>
             <input
               type="text"
