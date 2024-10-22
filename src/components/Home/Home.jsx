@@ -5,6 +5,7 @@ import CetagoryShowCase from "./Home/CetagoryShowCase";
 import Register from "./Home/Register";
 import Question from "./Home/Question";
 import AboutUs from "./Home/AboutUs";
+import DawnloadApp from "./Home/DawnloadApp";
 // import Location from "./Location";
 
 const Home = () => {
@@ -18,6 +19,7 @@ const Home = () => {
       <Question/>
       {/* <Location/> */}
       <AboutUs/>
+      <DawnloadApp/>
     </div>
   );
 };
