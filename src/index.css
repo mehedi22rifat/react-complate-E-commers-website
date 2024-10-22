@@ -4,6 +4,10 @@
 body {
   font-family: "Outfit", sans-serif;
   }
+  
+  #app {
+    height: 100%;
+  }
 
   .active{
     border-bottom: 3px solid rgb(17, 229, 17);
@@ -13,7 +17,147 @@ body {
     font: 600;
   }
 
+  html {
+    scroll-behavior: smooth;
+  }
+
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+
+/* registe form */
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.animate-fadeInLeft {
+  animation: fadeInLeft 1s ease-out;
+}
+
+.animate-fadeInRight {
+  animation: fadeInRight 1s ease-out;
+}
+
+/* sweper slider */
+
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+
+  /* Center slide text vertically */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.autoplay-progress {
+  position: absolute;
+  right: 16px;
+  bottom: 16px;
+  z-index: 10;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  color: var(--swiper-theme-color);
+}
+
+.autoplay-progress svg {
+  --progress: 0;
+  position: absolute;
+  left: 0;
+  top: 0px;
+  z-index: 10;
+  width: 100%;
+  height: 100%;
+  stroke-width: 4px;
+  stroke: var(--swiper-theme-color);
+  fill: none;
+  stroke-dashoffset: calc(125.6px * (1 - var(--progress)));
+  stroke-dasharray: 125.6;
+  transform: rotate(-90deg);
+}
+
+
+
+
+/* faq css */
+@layer components {
+  .btn-primary {
+      @apply py-1.5 px-3 text-center bg-blue-700 rounded-md text-white;
+  }
+}
+
+.slide-fade-enter-active,
+.slide-fade-leave-active {
+    transition: all 0.3s ease;
+}
+
+.slide-fade-enter,
+.slide-fade-leave-to {
+    transform: translateY(-10px);
+    opacity: 0;
+}
+
+.highlight {
+    background-color: yellow;
+}
+
+.hidden {
+    display: none;
+}
+
+/* 
+
+*/
+@keyframes bgColorChange {
+  0% {
+    background-color: #f7fee7; /* Start color */
+  }
+  50% {
+    background-color: #ecfccb; /* Middle transition color */
+  }
+  100% {
+    background-color: #f7fee7; /* End color */
+  }
+}
+
+.animate-bg-color {
+  animation: bgColorChange 5s infinite alternate; /* Animation duration and infinite loop */
+}

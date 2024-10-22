@@ -162,7 +162,7 @@ const CetagoryShowCase = () => {
      data-aos="fade-up"
      data-aos-anchor-placement="bottom-bottom"
     className="max-w-screen-2xl bg-gradient-to-r from-cyan-100 to-red-100 container mx-auto px-4 pb-16">
-      <h2 className="text-4xl font-bold capitalize text-center py-20">
+      <h2 className="text-5xl font-bold capitalize text-center py-20">
         {title}
       </h2>
 
