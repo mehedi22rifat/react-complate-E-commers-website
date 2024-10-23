@@ -4,7 +4,7 @@ import img2 from '../../../assets/images/app/02.jpg'
 
 const DawnloadApp = () => {
   return (
-    <div>
+    <div className='bg-slate-100'>
       <div className="relative overflow-hidden border-b w-full dark:border-gray-700 dark:bg-gray-900">
   <div className="px-6 py-8 sm:px-6 sm:py-20">
     <div className="max-w-2xl mx-auto text-center">

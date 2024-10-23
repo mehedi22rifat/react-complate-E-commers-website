@@ -6,6 +6,7 @@ import Register from "./Home/Register";
 import Question from "./Home/Question";
 import AboutUs from "./Home/AboutUs";
 import DawnloadApp from "./Home/DawnloadApp";
+import Sponsore from "./Home/Sponsore";
 // import Location from "./Location";
 
 const Home = () => {
@@ -20,6 +21,7 @@ const Home = () => {
       {/* <Location/> */}
       <AboutUs/>
       <DawnloadApp/>
+      <Sponsore/>
     </div>
   );
 };
