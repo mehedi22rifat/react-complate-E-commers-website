@@ -36,43 +36,46 @@ const Sponsore = () => {
   ];
 
   return (
-    <div className=" py-20 px-3">
-      <Swiper
-        slidesPerView={2}
-        spaceBetween={20}
-        autoplay={{
-          delay: 2000,
-          disableOnInteraction: false,
-        }}
-        pagination={{
-          clickable: true,
-        }}
-        breakpoints={{
-          640: {
-            slidesPerView: 1,
-            spaceBetween: 20,
-          },
-          768: {
-            slidesPerView: 3,
-            spaceBetween: 40,
-          },
-          1024: {
-            slidesPerView: 4,
-            spaceBetween: 50,
-          },
-        }}
-        modules={[Autoplay]}
-        className="mySwiper flex"
-      >
-        {sponsorList.map((item, i) => (
-          <SwiperSlide key={i} className="">
-            <div className="w-60">
-              <img className="w-28" src={item.imgUrl} alt="" />
-            </div>
-          </SwiperSlide>
-        ))}
-      </Swiper>
-    </div>
+    <div className="py-20 px-3 bg-slate-50">
+  <div className="max-w-screen-xl mx-auto">
+    <Swiper
+      slidesPerView={2}
+      spaceBetween={20}
+      autoplay={{
+        delay: 2000,
+        disableOnInteraction: false,
+      }}
+      pagination={{
+        clickable: true,
+      }}
+      breakpoints={{
+        640: {
+          slidesPerView: 1,
+          spaceBetween: 20,
+        },
+        768: {
+          slidesPerView: 3,
+          spaceBetween: 40,
+        },
+        1024: {
+          slidesPerView: 4,
+          spaceBetween: 50,
+        },
+      }}
+      modules={[Autoplay]}
+      className="mySwiper flex justify-between items-center"
+    >
+      {sponsorList.map((item, i) => (
+        <SwiperSlide key={i}>
+          <div className="w-full md:w-52 flex justify-center">
+            <img className="w-full h-auto max-w-xs" src={item.imgUrl} alt={`Sponsor ${i + 1}`} />
+          </div>
+        </SwiperSlide>
+      ))}
+    </Swiper>
+  </div>
+</div>
+
   );
 };
 

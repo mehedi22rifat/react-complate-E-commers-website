@@ -36,7 +36,7 @@ const AboutUs = () => {
       </div>
       <div className="grid lg:py-12 gap-8 grid-cols-1 lg:grid-cols-2 md:grid-cols-2 mt-8 ">
         <div>
-          <img className="object-cover rounded-xl aspect-square h-[500px]" src="https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80" alt />
+          <img className="hover:scale-110 transition-all duration-500 object-cover rounded-xl aspect-square h-[500px]" src="https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80" alt />
           
         </div>
 
@@ -44,7 +44,7 @@ const AboutUs = () => {
         <div>
         <div className="w-full mx-auto">
     <div className="grid grid-cols-1 lg:grid-cols-2 md:grid-cols-2 gap-6 justify-items-center">
-      <div className="flex flex-col w-full gap-2 p-4 text-center bg-white border-2 border-gray-600 rounded-lg shadow-lg dark:bg-gray-800">
+      <div className="flex hover:scale-110 transition-all duration-500 flex-col w-full gap-2 p-4 text-center bg-white border-2 border-gray-600 rounded-lg shadow-lg dark:bg-gray-800">
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-10 h-10 mx-auto text-violet-500 dark:text-violet-200">
           <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 12.75V12A2.25 2.25 0 014.5 9.75h15A2.25 2.25 0 0121.75 12v.75m-8.69-6.44l-2.12-2.12a1.5 1.5 0 00-1.061-.44H4.5A2.25 2.25 0 002.25 6v12a2.25 2.25 0 002.25 2.25h15A2.25 2.25 0 0021.75 18V9a2.25 2.25 0 00-2.25-2.25h-5.379a1.5 1.5 0 01-1.06-.44z" />
         </svg>
@@ -53,7 +53,7 @@ const AboutUs = () => {
         </p>
         <p className="leading-relaxed dark:text-gray-400">Marchant Enrolled</p>
       </div>
-      <div className="flex flex-col w-full gap-2 p-4 text-center bg-white border-2 border-gray-600 rounded-lg shadow-lg dark:bg-gray-800">
+      <div className="hover:scale-110 transition-all duration-500 flex flex-col w-full gap-2 p-4 text-center bg-white border-2 border-gray-600 rounded-lg shadow-lg dark:bg-gray-800">
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-10 h-10 mx-auto text-violet-500 dark:text-violet-200">
           <path strokeLinecap="round" strokeLinejoin="round" d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25" />
         </svg>
@@ -62,7 +62,7 @@ const AboutUs = () => {
         </p>
         <p className="leading-relaxed dark:text-gray-400">Certified Courses</p>
       </div>
-      <div className="flex lg:mt-14 flex-col w-full gap-2 p-4 text-center bg-white border-2 border-gray-600 rounded-lg shadow-lg dark:bg-gray-800">
+      <div className="hover:scale-110 transition-all duration-500 flex lg:mt-14 flex-col w-full gap-2 p-4 text-center bg-white border-2 border-gray-600 rounded-lg shadow-lg dark:bg-gray-800">
         <svg fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} className="w-10 h-10 mx-auto text-violet-500 dark:text-violet-200" viewBox="0 0 24 24">
           <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2" />
           <circle cx={9} cy={7} r={4} />
@@ -73,7 +73,7 @@ const AboutUs = () => {
         </p>
         <p className="leading-relaxed dark:text-gray-400">Users</p>
       </div>
-      <div className="flex lg:mt-14 flex-col w-full gap-2 p-4 text-center bg-white border-2 border-gray-600 rounded-lg shadow-lg dark:bg-gray-800">
+      <div className="hover:scale-110 transition-all duration-500 flex lg:mt-14 flex-col w-full gap-2 p-4 text-center bg-white border-2 border-gray-600 rounded-lg shadow-lg dark:bg-gray-800">
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-10 h-10 mx-auto text-violet-500 dark:text-violet-200">
           <path strokeLinecap="round" strokeLinejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
         </svg>
